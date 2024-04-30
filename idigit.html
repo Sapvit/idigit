@@ -13,12 +13,16 @@
         }
         .container {
             display: flex;
+            min-height: 100vh;
         }
         .menu {
             width: 250px;
-            background-color: #333;
+            background-color: #ccc; /* Grey color for the menu */
             color: #fff;
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
         .menu h1 {
             margin-bottom: 20px;
@@ -35,11 +39,21 @@
             flex: 1;
             padding: 20px;
         }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="menu">
+            <img src="logo.png" alt="IDigit Logo" style="max-width: 100%;">
             <h1>IDigit</h1>
             <p>User name: Jon Doe</p>
             <p>Current balance: 58EUR</p>
@@ -54,6 +68,9 @@
                 <li>Settings</li>
                 <li>Log out</li>
             </ul>
+            <div class="footer">
+                2024, all rights reserved
+            </div>
         </div>
         <div class="main-content">
             <!-- Main content will go here -->
