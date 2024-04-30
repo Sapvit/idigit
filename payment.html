@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Top up the balance</h2>
+        <div class="form-group">
+            <label for="amount">Amount (EUR):</label>
+            <input type="text" id="amount" name="amount" placeholder="Enter amount">
+        </div>
+        <div class="form-group">
+            <label for="method">Payment Method:</label>
+            <select id="method" name="method">
+                <option value="invoice">Invoice</option>
+                <option value="card">Debit/Credit Card</option>
+                <option value="crypto">Cryptocurrency</option>
+                <option value="applepay">Apple Pay</option>
+                <option value="googlepay">Google Pay</option>
+            </select>
+        </div>
+        <button onclick="proceed()">Proceed</button>
+    </div>
+
+    <script>
+        function proceed() {
+            alert("This button leads nowhere. It's just a mock-up!");
+        }
+    </script>
+</body>
+</html>
