@@ -17,25 +17,29 @@
         }
         .menu {
             width: 250px;
-            background-color: #ccc; /* Grey color for the menu */
-            color: #fff;
-            padding: 20px;
+            background-color: #d5e7fb;
+            color: #2D84E1;
+<!--            padding-left: 20px;-->
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             position: relative;
+            overflow-y: auto; /* Enable vertical scrolling */
         }
         .menu h1 {
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             font-weight: bold;
+            display: flex;
+            align-items: center; /* Center vertically */
         }
         .menu ul {
             list-style-type: none;
-            padding: 0;
-            margin: 0;
+            padding-left: 30px;
+            margin-bottom: 10px;
         }
         .menu ul li {
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+            cursor: pointer; /* Change cursor to pointer */
         }
         .main-content {
             flex: 1;
@@ -54,36 +58,54 @@
         .logo-frame {
             width: 50px;
             height: 50px;
-            border: 1px solid #fff;
             margin-bottom: 10px;
+        }
+        .menu p {
+            margin: 0; /* Remove default margin */
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="menu">
-            <div class="logo-frame"></div>
-            <h1>IDigit</h1>
-            <p>User name: Jon Doe</p>
-            <p>Current balance: 58EUR</p>
+            <h1>
+                <img class="logo-frame" src="https://sapvit.github.io/idigit/logo.png" alt="IDigit Logo">
+                IDigit
+            </h1>
+            <div class="user-info">
+                <p style="font-weight: bold;">Jon Doe</p>
+                <p style="font-size: smaller;">Current balance: 58&euro;</p>
+            </div>
             <ul>
-                <li>Main</li>
-                <li>New</li>
-                <li>To update</li>
-                <li>Completed</li>
-                <li>Rejected</li>
-                <li>KYC Form</li>
-                <li>Payment</li>
-                <li>Settings</li>
-                <li>Log out</li>
+                <li onclick="loadContent('main.html')"><span class="icon">🖥️ </span>Main</li>
+                <li onclick="loadContent('new.html')"><span class="icon">🛎️ </span>New</li>
+                <li onclick="loadContent('toupdate.html')"><span class="icon">⏳ </span>To update</li>
+                <li onclick="loadContent('completed.html')"><span class="icon">✅ </span>Completed</li>
+                <li onclick="loadContent('rejected.html')"><span class="icon">❌ </span>Rejected</li>
+                <li onclick="loadContent('kyc.html')"><span class="icon">🛠️ </span>KYC Form</li>
+                <li onclick="loadContent('payment.html')"><span class="icon">💰 </span>Payment</li>
+                <li onclick="loadContent('settings.html')"><span class="icon">⚙️ </span>Settings</li>
+                <li onclick="loadContent('logout.html')"><span class="icon">🔒 </span>Log out</li>
             </ul>
+            <div class="spacer"></div>
             <div class="footer">
-                2024, all rights reserved
+                &copy;2024, all rights reserved
             </div>
         </div>
-        <div class="main-content">
+        <div class="main-content" id="mainContent">
             <!-- Main content will go here -->
         </div>
     </div>
+
+    <script>
+           function loadContent(page) {
+               fetch(page)
+                   .then(response => response.text())
+                   .then(data => {
+                       document.getElementById("mainContent").innerHTML = data;
+                   })
+                   .catch(error => console.error('Error loading content:', error));
+           }
+       </script>
 </body>
 </html>
