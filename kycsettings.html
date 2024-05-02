@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC Settings</title>
+    <style>
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .section-header {
+            padding: 10px 20px;
+            border-bottom: 1px solid #ccc;
+            cursor: pointer;
+            font-weight: bold;
+            color: #333;
+        }
+        .section-body {
+            padding: 20px;
+            display: none;
+        }
+        .option {
+            margin-bottom: 15px;
+        }
+        .option label {
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+        .option input[type="checkbox"] {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="section">
+        <div class="section-header">Requested Documents</div>
+        <div class="section-body">
+            <div class="option"><input type="checkbox" id="passport"> <label for="passport">Passport</label></div>
+            <div class="option"><input type="checkbox" id="drivers-license"> <label for="drivers-license">Driver's License</label></div>
+            <div class="option"><input type="checkbox" id="foreign-passport"> <label for="foreign-passport">Foreign Passport</label></div>
+            <div class="option"><input type="checkbox" id="proof-of-residence"> <label for="proof-of-residence">Proof of Residence</label></div>
+            <div class="option"><input type="checkbox" id="tax-declaration"> <label for="tax-declaration">Tax Declaration</label></div>
+            <div class="option"><input type="checkbox" id="residence-permit"> <label for="residence-permit">Residence Permit</label></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">KYC Process Settings</div>
+        <div class="section-body">
+            <div class="option"><input type="checkbox" id="allow-pdf-upload"> <label for="allow-pdf-upload">Allow PDF Upload</label></div>
+            <div class="option"><input type="checkbox" id="request-liveness-check"> <label for="request-liveness-check">Request Liveness Check</label></div>
+            <div class="option"><input type="checkbox" id="allow-change-ip-address"> <label for="allow-change-ip-address">Allow to Change IP Address</label></div>
+            <div class="option"><input type="checkbox" id="allow-fill-in-steps"> <label for="allow-fill-in-steps">Allow to Fill in in Several Steps</label></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">Lists Monitored</div>
+        <div class="section-body">
+            <div class="option"><input type="checkbox" id="internal"> <label for="internal">Internal</label></div>
+            <div class="option"><input type="checkbox" id="sanctions-lists"> <label for="sanctions-lists">Sanctions Lists</label></div>
+            <div class="option"><input type="checkbox" id="peps"> <label for="peps">PEPs</label></div>
+            <div class="option"><input type="checkbox" id="wanted-persons-list"> <label for="wanted-persons-list">Wanted Persons List</label></div>
+            <div class="option"><input type="checkbox" id="expired-documents"> <label for="expired-documents">Expired Documents</label></div>
+        </div>
+    </div>
+
+    <div class="section">
+        <div class="section-header">Blacklisted Countries</div>
+        <div class="section-body">
+            <div class="option"><input type="checkbox" id="blacklist-afghanistan"> <label for="blacklist-afghanistan">Afghanistan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-albania"> <label for="blacklist-albania">Albania</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-algeria"> <label for="blacklist-algeria">Algeria</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-andorra"> <label for="blacklist-andorra">Andorra</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-angola"> <label for="blacklist-angola">Angola</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-antigua-and-barbuda"> <label for="blacklist-antigua-and-barbuda">Antigua and Barbuda</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-argentina"> <label for="blacklist-argentina">Argentina</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-armenia"> <label for="blacklist-armenia">Armenia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-australia"> <label for="blacklist-australia">Australia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-austria"> <label for="blacklist-austria">Austria</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-azerbaijan"> <label for="blacklist-azerbaijan">Azerbaijan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-bahamas"> <label for="blacklist-bahamas">Bahamas</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-bahrain"> <label for="blacklist-bahrain">Bahrain</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-bangladesh"> <label for="blacklist-bangladesh">Bangladesh</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-barbados"> <label for="blacklist-barbados">Barbados</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-belarus"> <label for="blacklist-belarus">Belarus</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-belgium"> <label for="blacklist-belgium">Belgium</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-belize"> <label for="blacklist-belize">Belize</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-benin"> <label for="blacklist-benin">Benin</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-bhutan"> <label for="blacklist-bhutan">Bhutan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-bolivia"> <label for="blacklist-bolivia">Bolivia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-bosnia-and-herzegovina"> <label for="blacklist-bosnia-and-herzegovina">Bosnia and Herzegovina</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-botswana"> <label for="blacklist-botswana">Botswana</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-brazil"> <label for="blacklist-brazil">Brazil</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-brunei"> <label for="blacklist-brunei">Brunei</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-bulgaria"> <label for="blacklist-bulgaria">Bulgaria</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-burkina-faso"> <label for="blacklist-burkina-faso">Burkina Faso</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-burundi"> <label for="blacklist-burundi">Burundi</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-cabo-verde"> <label for="blacklist-cabo-verde">Cabo Verde</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-cambodia"> <label for="blacklist-cambodia">Cambodia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-cameroon"> <label for="blacklist-cameroon">Cameroon</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-canada"> <label for="blacklist-canada">Canada</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-central-african-republic"> <label for="blacklist-central-african-republic">Central African Republic</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-chad"> <label for="blacklist-chad">Chad</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-chile"> <label for="blacklist-chile">Chile</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-china"> <label for="blacklist-china">China</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-colombia"> <label for="blacklist-colombia">Colombia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-comoros"> <label for="blacklist-comoros">Comoros</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-congo-democratic-republic-of-the"> <label for="blacklist-congo-democratic-republic-of-the">Congo, Democratic Republic of the</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-congo-republic-of-the"> <label for="blacklist-congo-republic-of-the">Congo, Republic of the</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-costa-rica"> <label for="blacklist-costa-rica">Costa Rica</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-croatia"> <label for="blacklist-croatia">Croatia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-cuba"> <label for="blacklist-cuba">Cuba</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-cyprus"> <label for="blacklist-cyprus">Cyprus</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-czech-republic"> <label for="blacklist-czech-republic">Czech Republic</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-denmark"> <label for="blacklist-denmark">Denmark</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-djibouti"> <label for="blacklist-djibouti">Djibouti</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-dominica"> <label for="blacklist-dominica">Dominica</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-dominican-republic"> <label for="blacklist-dominican-republic">Dominican Republic</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-east-timor"> <label for="blacklist-east-timor">East Timor</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-ecuador"> <label for="blacklist-ecuador">Ecuador</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-egypt"> <label for="blacklist-egypt">Egypt</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-el-salvador"> <label for="blacklist-el-salvador">El Salvador</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-equatorial-guinea"> <label for="blacklist-equatorial-guinea">Equatorial Guinea</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-eritrea"> <label for="blacklist-eritrea">Eritrea</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-estonia"> <label for="blacklist-estonia">Estonia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-ethiopia"> <label for="blacklist-ethiopia">Ethiopia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-fiji"> <label for="blacklist-fiji">Fiji</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-finland"> <label for="blacklist-finland">Finland</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-france"> <label for="blacklist-france">France</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-gabon"> <label for="blacklist-gabon">Gabon</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-gambia"> <label for="blacklist-gambia">Gambia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-georgia"> <label for="blacklist-georgia">Georgia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-germany"> <label for="blacklist-germany">Germany</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-ghana"> <label for="blacklist-ghana">Ghana</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-greece"> <label for="blacklist-greece">Greece</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-grenada"> <label for="blacklist-grenada">Grenada</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-guatemala"> <label for="blacklist-guatemala">Guatemala</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-guinea"> <label for="blacklist-guinea">Guinea</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-guinea-bissau"> <label for="blacklist-guinea-bissau">Guinea-Bissau</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-guyana"> <label for="blacklist-guyana">Guyana</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-haiti"> <label for="blacklist-haiti">Haiti</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-honduras"> <label for="blacklist-honduras">Honduras</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-hungary"> <label for="blacklist-hungary">Hungary</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-iceland"> <label for="blacklist-iceland">Iceland</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-india"> <label for="blacklist-india">India</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-indonesia"> <label for="blacklist-indonesia">Indonesia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-iran"> <label for="blacklist-iran">Iran</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-iraq"> <label for="blacklist-iraq">Iraq</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-ireland"> <label for="blacklist-ireland">Ireland</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-israel"> <label for="blacklist-israel">Israel</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-italy"> <label for="blacklist-italy">Italy</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-ivory-coast"> <label for="blacklist-ivory-coast">Ivory Coast</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-jamaica"> <label for="blacklist-jamaica">Jamaica</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-japan"> <label for="blacklist-japan">Japan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-jordan"> <label for="blacklist-jordan">Jordan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-kazakhstan"> <label for="blacklist-kazakhstan">Kazakhstan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-kenya"> <label for="blacklist-kenya">Kenya</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-kiribati"> <label for="blacklist-kiribati">Kiribati</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-kosovo"> <label for="blacklist-kosovo">Kosovo</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-kuwait"> <label for="blacklist-kuwait">Kuwait</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-kyrgyzstan"> <label for="blacklist-kyrgyzstan">Kyrgyzstan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-laos"> <label for="blacklist-laos">Laos</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-latvia"> <label for="blacklist-latvia">Latvia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-lebanon"> <label for="blacklist-lebanon">Lebanon</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-lesotho"> <label for="blacklist-lesotho">Lesotho</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-liberia"> <label for="blacklist-liberia">Liberia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-libya"> <label for="blacklist-libya">Libya</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-liechtenstein"> <label for="blacklist-liechtenstein">Liechtenstein</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-lithuania"> <label for="blacklist-lithuania">Lithuania</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-luxembourg"> <label for="blacklist-luxembourg">Luxembourg</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-madagascar"> <label for="blacklist-madagascar">Madagascar</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-malawi"> <label for="blacklist-malawi">Malawi</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-malaysia"> <label for="blacklist-malaysia">Malaysia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-maldives"> <label for="blacklist-maldives">Maldives</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-mali"> <label for="blacklist-mali">Mali</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-malta"> <label for="blacklist-malta">Malta</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-marshall-islands"> <label for="blacklist-marshall-islands">Marshall Islands</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-mauritania"> <label for="blacklist-mauritania">Mauritania</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-mauritius"> <label for="blacklist-mauritius">Mauritius</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-mexico"> <label for="blacklist-mexico">Mexico</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-micronesia"> <label for="blacklist-micronesia">Micronesia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-moldova"> <label for="blacklist-moldova">Moldova</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-monaco"> <label for="blacklist-monaco">Monaco</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-mongolia"> <label for="blacklist-mongolia">Mongolia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-montenegro"> <label for="blacklist-montenegro">Montenegro</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-morocco"> <label for="blacklist-morocco">Morocco</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-mozambique"> <label for="blacklist-mozambique">Mozambique</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-myanmar"> <label for="blacklist-myanmar">Myanmar</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-namibia"> <label for="blacklist-namibia">Namibia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-nauru"> <label for="blacklist-nauru">Nauru</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-nepal"> <label for="blacklist-nepal">Nepal</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-netherlands"> <label for="blacklist-netherlands">Netherlands</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-new-zealand"> <label for="blacklist-new-zealand">New Zealand</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-nicaragua"> <label for="blacklist-nicaragua">Nicaragua</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-niger"> <label for="blacklist-niger">Niger</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-nigeria"> <label for="blacklist-nigeria">Nigeria</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-north-korea"> <label for="blacklist-north-korea">North Korea</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-north-macedonia"> <label for="blacklist-north-macedonia">North Macedonia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-norway"> <label for="blacklist-norway">Norway</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-oman"> <label for="blacklist-oman">Oman</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-pakistan"> <label for="blacklist-pakistan">Pakistan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-palau"> <label for="blacklist-palau">Palau</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-palestine"> <label for="blacklist-palestine">Palestine</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-panama"> <label for="blacklist-panama">Panama</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-papua-new-guinea"> <label for="blacklist-papua-new-guinea">Papua New Guinea</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-paraguay"> <label for="blacklist-paraguay">Paraguay</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-peru"> <label for="blacklist-peru">Peru</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-philippines"> <label for="blacklist-philippines">Philippines</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-poland"> <label for="blacklist-poland">Poland</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-portugal"> <label for="blacklist-portugal">Portugal</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-qatar"> <label for="blacklist-qatar">Qatar</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-romania"> <label for="blacklist-romania">Romania</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-russia"> <label for="blacklist-russia">Russia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-rwanda"> <label for="blacklist-rwanda">Rwanda</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-saint-kitts-and-nevis"> <label for="blacklist-saint-kitts-and-nevis">Saint Kitts and Nevis</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-saint-lucia"> <label for="blacklist-saint-lucia">Saint Lucia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-saint-vincent-and-the-grenadines"> <label for="blacklist-saint-vincent-and-the-grenadines">Saint Vincent and the Grenadines</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-samoa"> <label for="blacklist-samoa">Samoa</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-san-marino"> <label for="blacklist-san-marino">San Marino</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-sao-tome-and-principe"> <label for="blacklist-sao-tome-and-principe">Sao Tome and Principe</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-saudi-arabia"> <label for="blacklist-saudi-arabia">Saudi Arabia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-senegal"> <label for="blacklist-senegal">Senegal</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-serbia"> <label for="blacklist-serbia">Serbia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-seychelles"> <label for="blacklist-seychelles">Seychelles</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-sierra-leone"> <label for="blacklist-sierra-leone">Sierra Leone</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-singapore"> <label for="blacklist-singapore">Singapore</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-slovakia"> <label for="blacklist-slovakia">Slovakia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-slovenia"> <label for="blacklist-slovenia">Slovenia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-solomon-islands"> <label for="blacklist-solomon-islands">Solomon Islands</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-somalia"> <label for="blacklist-somalia">Somalia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-south-africa"> <label for="blacklist-south-africa">South Africa</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-south-korea"> <label for="blacklist-south-korea">South Korea</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-south-sudan"> <label for="blacklist-south-sudan">South Sudan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-spain"> <label for="blacklist-spain">Spain</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-sri-lanka"> <label for="blacklist-sri-lanka">Sri Lanka</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-sudan"> <label for="blacklist-sudan">Sudan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-suriname"> <label for="blacklist-suriname">Suriname</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-sweden"> <label for="blacklist-sweden">Sweden</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-switzerland"> <label for="blacklist-switzerland">Switzerland</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-syria"> <label for="blacklist-syria">Syria</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-taiwan"> <label for="blacklist-taiwan">Taiwan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-tajikistan"> <label for="blacklist-tajikistan">Tajikistan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-tanzania"> <label for="blacklist-tanzania">Tanzania</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-thailand"> <label for="blacklist-thailand">Thailand</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-togo"> <label for="blacklist-togo">Togo</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-tonga"> <label for="blacklist-tonga">Tonga</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-trinidad-and-tobago"> <label for="blacklist-trinidad-and-tobago">Trinidad and Tobago</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-tunisia"> <label for="blacklist-tunisia">Tunisia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-turkey"> <label for="blacklist-turkey">Turkey</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-turkmenistan"> <label for="blacklist-turkmenistan">Turkmenistan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-tuvalu"> <label for="blacklist-tuvalu">Tuvalu</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-uganda"> <label for="blacklist-uganda">Uganda</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-ukraine"> <label for="blacklist-ukraine">Ukraine</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-united-arab-emirates"> <label for="blacklist-united-arab-emirates">United Arab Emirates</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-united-kingdom"> <label for="blacklist-united-kingdom">United Kingdom</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-united-states"> <label for="blacklist-united-states">United States</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-uruguay"> <label for="blacklist-uruguay">Uruguay</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-uzbekistan"> <label for="blacklist-uzbekistan">Uzbekistan</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-vanuatu"> <label for="blacklist-vanuatu">Vanuatu</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-vatican-city"> <label for="blacklist-vatican-city">Vatican City</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-venezuela"> <label for="blacklist-venezuela">Venezuela</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-vietnam"> <label for="blacklist-vietnam">Vietnam</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-yemen"> <label for="blacklist-yemen">Yemen</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-zambia"> <label for="blacklist-zambia">Zambia</label></div>
+            <div class="option"><input type="checkbox" id="blacklist-zimbabwe"> <label for="blacklist-zimbabwe">Zimbabwe</label></div>
+        </div>
+
+    </div>
+
+    <script>
+        // Add your JavaScript here to handle collapsible sections
+        const sections = document.querySelectorAll('.section');
+
+        sections.forEach(section => {
+            const header = section.querySelector('.section-header');
+            const body = section.querySelector('.section-body');
+
+            header.addEventListener('click', () => {
+                body.style.display = body.style.display === 'none' ? 'block' : 'none';
+            });
+        });
+    </script>
+</body>
+</html>
