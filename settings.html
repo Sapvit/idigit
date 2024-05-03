@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+        textarea {
+            height: 150px;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .toggle-switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        input:checked + .slider {
+            background-color: #007bff;
+        }
+        input:focus + .slider {
+            box-shadow: 0 0 1px #007bff;
+        }
+        input:checked + .slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+        .slider.round {
+            border-radius: 34px;
+        }
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Settings</div>
+        <div class="form-group">
+            <label for="2fa">Use Two-Factor Authentication (2FA)</label>
+            <label class="toggle-switch">
+                <input type="checkbox" id="2fa" name="2fa">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="darkMode">Dark Mode</label>
+            <label class="toggle-switch">
+                <input type="checkbox" id="darkMode" name="darkMode">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="alertsEmail">Alerts Email:</label>
+            <input type="email" id="alertsEmail" name="alertsEmail" value="alerts@idigit.com">
+        </div>
+        <button onclick="resetPassword()">Reset Password</button>
+        <div style="margin-bottom: 10px;"></div>
+        <div class="title">Contact Support</div>
+        <div class="form-group">
+            <label for="topic">Topic:</label>
+            <input type="text" id="topic" name="topic">
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea>
+        </div>
+        <button onclick="sendRequest()">Send Request to Support</button>
+    </div>
+
+    <script>
+        function resetPassword() {
+            alert("Resetting password..."); // Placeholder functionality
+        }
+
+        function sendRequest() {
+            var topic = document.getElementById("topic").value;
+            var message = document.getElementById("message").value;
+            // Here you can handle sending the request to support
+            console.log("Sending request to support...");
+            console.log("Topic:", topic);
+            console.log("Message:", message);
+            // Placeholder functionality
+            alert("Request sent! Topic: " + topic + "\nMessage: " + message);
+        }
+    </script>
+</body>
+</html>
