@@ -58,11 +58,12 @@ Define mandatory documents, opt for liveness checks, manage regional settings (e
 ---
 
 ## 📎 Technologies Used
-
+- Mobile iOS App (Swift)
+- Web Admin Dashboard (HTML)
+## 📎 Technologies To Be Used
 - Decentralized Identity (DID)
 - Blockchain Authentication
-- Mobile iOS App (Swift)
-- Web Admin Dashboard (React or similar)
+
 
 ---
 
